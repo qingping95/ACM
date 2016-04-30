@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1445052397 source:f:\acm\program\uvalive_4125\main.cpp
+	<cstdio>
+	<cstdlib>
+	<cstring>
+	<algorithm>
+	<map>
+

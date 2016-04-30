@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1445529908 source:f:\acm\program\2013_hangzhou_online\main.cpp
+	<iostream>
+	<cstdio>
+	<algorithm>
+	<queue>
+	<cstring>
+	<string>
+	<cmath>
+	<set>
+	<map>
+	<vector>
+	<climits>
+	<iomanip>
+

@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1448353540 source:f:\acm\program\alogrithm_ass_3\main.cpp
+	<iostream>
+	<cstdio>
+	<stack>
+	<cstring>
+	<queue>
+	<algorithm>
+	<cmath>
+

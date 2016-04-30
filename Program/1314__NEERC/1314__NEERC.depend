@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1459697329 source:f:\acm\program\1314__neerc\main.cpp
+	<iostream>
+	<cstdio>
+	<algorithm>
+	<queue>
+	<cstring>
+	<string>
+	<cmath>
+	<set>
+	<map>
+	<vector>
+	<climits>
+

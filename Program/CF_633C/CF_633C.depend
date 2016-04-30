@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1456983541 source:f:\acm\program\cf_633c\main.cpp
+	<iostream>
+	<cstdio>
+	<stack>
+	<cstring>
+	<queue>
+	<algorithm>
+	<set>
+	<cmath>
+	<map>
+	<unordered_map>
+

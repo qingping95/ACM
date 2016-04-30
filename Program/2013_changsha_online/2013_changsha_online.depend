@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1445418101 source:f:\acm\program\2013_changsha_online\main.cpp
+	<iostream>
+	<cstdio>
+	<algorithm>
+	<queue>
+	<cstring>
+	<string>
+	<cmath>
+	<set>
+	<map>
+	<vector>
+	<climits>
+

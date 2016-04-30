@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1446104009 source:f:\acm\program\2013_nanjin_i\main.cpp
+	<iostream>
+	<stdio.h>
+	<string.h>
+	<cmath>
+	<algorithm>
+	<vector>
+

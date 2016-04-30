@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1447172248 source:f:\acm\program\zoj_3874_ntt\main.cpp
+	<iostream>
+	<cstdio>
+	<stack>
+	<cstring>
+	<queue>
+	<algorithm>
+	<cmath>
+

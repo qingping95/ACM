@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1445070255 source:f:\acm\program\hdu_1564\main.cpp
+	<iostream>
+	<cstdio>
+	<stack>
+	<cstring>
+	<queue>
+	<algorithm>
+	<cmath>
+

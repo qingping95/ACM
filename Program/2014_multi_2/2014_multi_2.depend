@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1460735991 source:f:\acm\program\2014_multi_2\main.cpp
+	<iostream>
+	<cstdio>
+	<algorithm>
+	<queue>
+	<cstring>
+	<string>
+	<cmath>
+	<set>
+	<map>
+	<vector>
+	<climits>
+

@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1449561245 source:f:\acm\program\ass_4_maxsubarray\main.cpp
+	<iostream>
+	<cstdio>
+	<stack>
+	<cstring>
+	<queue>
+	<algorithm>
+	<cmath>
+

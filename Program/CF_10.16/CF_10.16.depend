@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1445944757 source:f:\acm\program\cf_10.16\main.cpp
+	<stdio.h>
+	<string.h>
+	<iostream>
+	<algorithm>
+	<vector>
+	<queue>
+	<set>
+	<map>
+	<string>
+	<math.h>
+	<stdlib.h>
+

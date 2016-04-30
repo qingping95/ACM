@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1445959941 source:f:\acm\program\2013_changchun_online_i\main.cpp
+	<iostream>
+	<cstdio>
+	<stack>
+	<cstring>
+	<queue>
+	<algorithm>
+	<cmath>
+

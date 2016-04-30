@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1444179117 source:/home/qingping/KuaiPan/Program/SPOJ_Qtree5/main.cpp
+	<iostream>
+	<cstdio>
+	<stack>
+	<cstring>
+	<queue>
+	<algorithm>
+	<cmath>
+
+1444227756 source:d:\acm\program\spoj_qtree5\main.cpp
+	<iostream>
+	<cstdio>
+	<stack>
+	<cstring>
+	<queue>
+	<algorithm>
+	<cmath>
+

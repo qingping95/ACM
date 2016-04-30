@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1445095020 source:f:\acm\program\2012_neerc_m_sub\main.cpp
+	<iostream>
+	<cstdio>
+	<stack>
+	<cstring>
+	<queue>
+	<algorithm>
+	<cmath>
+

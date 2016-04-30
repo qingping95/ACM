@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1446119877 source:f:\acm\program\topcoder\hdu_4744\main.cpp
+	<iostream>
+	<cstdio>
+	<stack>
+	<cstring>
+	<queue>
+	<algorithm>
+	<cmath>
+

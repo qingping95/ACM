@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1445625593 source:/home/qingping/KuaiPan/Program/2013_hangzhou_online_E/main.cpp
+	<algorithm>
+	<iostream>
+	<string.h>
+	<stdio.h>
+

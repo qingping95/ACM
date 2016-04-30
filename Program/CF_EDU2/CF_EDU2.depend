@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1448687113 source:f:\acm\program\cf_edu2\main.cpp
+	<iostream>
+	<cstdio>
+	<stack>
+	<cstring>
+	<queue>
+	<algorithm>
+	<cmath>
+	<iomanip>
+

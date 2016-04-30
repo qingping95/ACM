@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1459945559 source:f:\acm\program\ms_4.6\main.cpp
+	<iostream>
+	<cstdio>
+	<stack>
+	<cstring>
+	<queue>
+	<algorithm>
+	<cmath>
+

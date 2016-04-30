@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1456045091 source:f:\acm\program\winter_training_3\main.cpp
+	<iostream>
+	<algorithm>
+	<queue>
+	<cstdio>
+

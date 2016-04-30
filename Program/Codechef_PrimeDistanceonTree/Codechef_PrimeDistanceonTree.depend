@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1447151912 source:f:\acm\program\codechef_primedistanceontree\main.cpp
+	<iostream>
+	<cstdio>
+	<stack>
+	<cstring>
+	<queue>
+	<algorithm>
+	<cmath>
+

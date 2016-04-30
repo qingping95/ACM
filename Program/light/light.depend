@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1447506322 source:/home/qingping/KuaiPan/Program/light/main.cpp
+	<iostream>
+	<cstdio>
+	<cstring>
+

@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1459769890 source:f:\acm\program\hiho_19\main.cpp
+	<iostream>
+	<cstdio>
+	<algorithm>
+	<queue>
+	<cstring>
+	<string>
+	<cmath>
+	<set>
+	<map>
+	<vector>
+	<climits>
+	<ctime>
+

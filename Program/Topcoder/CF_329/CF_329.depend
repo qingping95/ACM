@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1446791804 source:f:\acm\program\topcoder\cf_329\main.cpp
+	<iostream>
+	<cstdio>
+	<stack>
+	<cstring>
+	<queue>
+	<algorithm>
+	<cmath>
+	<map>
+

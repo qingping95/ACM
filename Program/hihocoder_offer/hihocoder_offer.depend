@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1457854893 source:f:\acm\program\hihocoder_offer\main.cpp
+	<iostream>
+	<cstdio>
+	<stack>
+	<cstring>
+	<queue>
+	<algorithm>
+	<cmath>
+

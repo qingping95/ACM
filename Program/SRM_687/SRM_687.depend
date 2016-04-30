@@ -1,0 +1,24 @@
+# depslib dependency file v1.0
+1460028459 source:f:\acm\program\srm_687\main.cpp
+	<iostream>
+	<fstream>
+	<cstring>
+	<climits>
+	<deque>
+	<cmath>
+	<queue>
+	<stack>
+	<ctime>
+	<list>
+	<map>
+	<set>
+	<utility>
+	<sstream>
+	<complex>
+	<string>
+	<vector>
+	<cstdio>
+	<bitset>
+	<functional>
+	<algorithm>
+

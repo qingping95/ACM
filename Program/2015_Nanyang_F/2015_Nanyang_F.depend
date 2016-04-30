@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1446032009 source:f:\acm\program\2015_nanyang_f\main.cpp
+	<iostream>
+	<cstdio>
+	<stack>
+	<cstring>
+	<queue>
+	<algorithm>
+	<cmath>
+

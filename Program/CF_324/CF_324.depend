@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1444158496 source:/home/qingping/KuaiPan/Program/CF_324/main.cpp
+	<iostream>
+	<cstdio>
+	<stack>
+	<cstring>
+	<queue>
+	<algorithm>
+	<cmath>
+

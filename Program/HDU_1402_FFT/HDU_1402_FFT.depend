@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1447072682 source:f:\acm\program\hdu_1402_fft\main.cpp
+	<iostream>
+	<cstdio>
+	<stack>
+	<cstring>
+	<queue>
+	<algorithm>
+	<cmath>
+

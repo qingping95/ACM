@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1445944593 source:f:\acm\program\boyi_a\main.cpp
+	<set>
+	<queue>
+	<stack>
+	<math.h>
+	<stdio.h>
+	<stdlib.h>
+	<iostream>
+	<limits.h>
+	<string.h>
+	<string>
+	<algorithm>
+

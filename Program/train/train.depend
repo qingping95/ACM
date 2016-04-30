@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1444201149 source:/home/qingping/KuaiPan/Program/train/main.cpp
+	<iostream>
+	<cstdio>
+	<stack>
+	<cstring>
+	<queue>
+	<algorithm>
+	<cmath>
+

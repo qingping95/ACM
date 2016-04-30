@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1449560322 source:f:\acm\program\ass_kmin\main.cpp
+	<iostream>
+	<cstdio>
+	<stack>
+	<cstring>
+	<queue>
+	<algorithm>
+	<cmath>
+

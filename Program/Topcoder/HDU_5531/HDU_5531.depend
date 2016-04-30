@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1446462881 source:f:\acm\program\topcoder\hdu_5531\main.cpp
+	<cstdio>
+	<cstring>
+	<algorithm>
+	<vector>
+	<queue>
+	<set>
+	<map>
+	<string>
+	<cmath>
+	<cstdlib>
+	<ctime>
+

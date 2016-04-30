@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1453556770 source:f:\acm\program\bc_69\main.cpp
+	<iostream>
+	<cstdio>
+	<stack>
+	<cstring>
+	<queue>
+	<algorithm>
+	<cmath>
+

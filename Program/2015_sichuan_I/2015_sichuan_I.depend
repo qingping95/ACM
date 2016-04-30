@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1444326224 source:d:\acm\program\2015_sichuan_i\main.cpp
+	<iostream>
+	<cstdio>
+	<stack>
+	<cstring>
+	<queue>
+	<algorithm>
+	<cmath>
+	<assert.h>
+
