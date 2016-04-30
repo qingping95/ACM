@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1462041039 source:f:\acm\gitacm\acm\program\gcj_r1b\main.cpp
+	<iostream>
+	<cstdio>
+	<algorithm>
+	<queue>
+	<cstring>
+	<string>
+	<cmath>
+	<set>
+	<map>
+	<vector>
+	<climits>
+
