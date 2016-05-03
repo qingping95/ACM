@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1462211480 source:f:\acm\gitacm\acm\program\uva_11490\main.cpp
+	<iostream>
+	<cstdio>
+	<stack>
+	<cstring>
+	<queue>
+	<algorithm>
+	<cmath>
+
