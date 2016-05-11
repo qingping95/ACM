@@ -27,7 +27,8 @@ void Open()
 const LL N = 1000010;
 char sb[N];
 char s[N];
-char ans[N];
+char ans1[N];
+char ans2[N];
 int num[111];
 bool update(int res, int add)
 {
@@ -84,27 +85,60 @@ int main()
             if(!update(res, -1)) continue;
             int fir = 1;
             while(fir < 10 && num[fir] == 0) fir++;
+            bool h1 = false;
+            bool h2 = false;
+            if(fir >= sb[0] - '0' && sb[0] != '0')
+            {
+                for(int j = 0; j < m; j++)
+                    ans1[idx++] = sb[j];
+                for(int i = 0 ; i < 10; i++)
+                    while(num[i]--)
+                        ans1[idx++] = '0'+i;
+                ans1[idx++] = '\0';
+                h1 = true;
+                memset(num, 0, sizeof(num));
+                for(int i = m; i < idx-1; i++)
+                    num[ans1[i]-'0']++;
+            }
             if(fir < 10)
             {
+                idx = 0;
                 num[fir]--;
-                ans[idx++] = fir+'0';
+                ans2[idx++] = fir+'0';
                 for(int i = 0; i < 10; i++){
                     if(i + '0' == sb[0] && flag == false){
                         for(int j = 0; j < m; j++)
-                            ans[idx++] = sb[j];
+                            ans2[idx++] = sb[j];
                     }
                     while(num[i]--)
-                        ans[idx++] = '0'+i;
+                        ans2[idx++] = '0'+i;
                     if(i + '0' == sb[0] && flag){
                         for(int j = 0; j < m; j++)
-                            ans[idx++] = sb[j];
+                            ans2[idx++] = sb[j];
                     }
                 }
-                ans[idx++] = '\0';
-                printf("%s\n", ans);
+                ans2[idx++] = '\0';
+                h2 = true;
+            }
+            char* out = NULL;
+            if(h1&&h2)
+            {
+                out = ans1;
+                for(int i = 0; i < res; i++)
+                {
+                    if(ans1[i] < ans2[i]) {out = ans1;break;}
+                    if(ans1[i] > ans2[i]) {out = ans2;break;}
+                }
+            }
+            else if(h1) out = ans1;
+            else if(h2) out = ans2;
+            if(out != NULL)
+            {
+                printf("%s\n", out);
                 FLAG = false;
                 break;
             }
+
             update(res, 1);
         }
         if(FLAG)

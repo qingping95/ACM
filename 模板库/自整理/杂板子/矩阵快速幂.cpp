@@ -62,3 +62,41 @@ int main()
     }
     return 0;
 }
+
+//比较优雅的方式
+struct Matrix
+{
+    ll a[2][2];
+    Matrix()
+    {
+        memset(a,0,sizeof(a));
+    }
+    void init()
+    {
+         for(int i=0;i<2;i++)
+             for(int j=0;j<2;j++)
+                 a[i][j]=(i==j);
+    }
+    Matrix operator * (const Matrix &B)const
+    {
+        Matrix C;
+        for(int i=0;i<2;i++)
+            for(int j=0;j<2;j++)
+                for(int k=0;k<2;k++)
+                    C.a[i][j]=(C.a[i][j]+a[i][k]*B.a[k][j])%Mod;
+        return C;
+    }
+    Matrix operator ^ (const ll &t)const
+    {
+        Matrix res,A=(*this);
+        ll p=t;
+        res.init();
+        while(p)
+        {
+            if(p&1)res=res*A;
+            A=A*A;
+            p>>=1;
+        }
+        return res;
+    }
+}t[MAXM];

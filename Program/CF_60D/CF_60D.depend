@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1462495353 source:f:\acm\gitacm\acm\program\cf_350\main.cpp
+1462897289 source:f:\acm\gitacm\acm\program\cf_60d\main.cpp
 	<iostream>
 	<cstdio>
 	<stack>
@@ -7,5 +7,4 @@
 	<queue>
 	<algorithm>
 	<cmath>
-	<map>
 
