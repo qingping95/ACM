@@ -1,0 +1,24 @@
+# depslib dependency file v1.0
+1463068676 source:f:\acm\gitacm\acm\program\tco_2a\main.cpp
+	<iostream>
+	<fstream>
+	<cstring>
+	<climits>
+	<deque>
+	<cmath>
+	<queue>
+	<stack>
+	<ctime>
+	<list>
+	<map>
+	<set>
+	<utility>
+	<sstream>
+	<complex>
+	<string>
+	<vector>
+	<cstdio>
+	<bitset>
+	<functional>
+	<algorithm>
+
