@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1463726843 source:f:\acm\gitacm\acm\program\cf_353e\main.cpp
+	<cstdio>
+	<cstring>
+	<algorithm>
+
