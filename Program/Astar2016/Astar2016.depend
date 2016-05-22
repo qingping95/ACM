@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1463819417 source:f:\acm\gitacm\acm\program\astar2016\main.cpp
+	<iostream>
+	<cstdio>
+	<stack>
+	<cstring>
+	<queue>
+	<algorithm>
+	<cmath>
+
