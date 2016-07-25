@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1467822714 source:f:\acm\gitacm\acm\program\cf_468c\main.cpp
+	<iostream>
+	<cstdio>
+	<stack>
+	<cstring>
+	<queue>
+	<algorithm>
+	<cmath>
+	<climits>
+	<assert.h>
+

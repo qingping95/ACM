@@ -11,13 +11,17 @@ const double eps = 1e-10;
 const double PI = acos(-1.0);
 typedef Point Vector;
 int dcmp(double x){if(fabs(x) < eps) return 0;else return x<0?-1:1;}
+int dcmp(double x)
+{
+    return (x>eps)-(x<-eps);
+}
 Vector operator+(Vector A,Vector B){return Vector(A.x+B.x, A.y+B.y);}
 Vector operator-(Point A,Point B){return Vector(A.x-B.x, A.y-B.y);}
 Vector operator*(Vector A, double p){return Vector(A.x*p, A.y*p);}
 Vector operator/(Vector A, double p){return Vector(A.x/p, A.y/p);}
 bool operator<(const Point& a, const Point& b){return a.x<b.x || (a.x == b.x && a.y < b.y);}
 bool operator==(const Point& a, const Point& b){return dcmp(a.x-b.x) == 0 && dcmp(a.y-b.y) == 0;}
-double angle(Vector A){return atan2(A.y,A.x);}//返回A向量的极角atan2(y,x)所表达的意思是坐标原点为起点，指向(x,y)的射线在坐标平面上与x轴正方向之间的角的角度。
+double angle(Vector A){return atan2(A.y,A.x);}//返回A向量的极角atan2(y,x)所表达的意思是坐标原点为起点，指向(x,y)的射线在坐标平面上与x轴正方向之间的角的角度。范围是(-pi,pi];
 double Dot(Vector A, Vector B){return A.x*B.x+A.y*B.y;}
 double Length(Vector A){return sqrt(Dot(A,A));}
 double Angle(Vector A,Vector B){return acos(Dot(A,B)/Length(A)/Length(B));}//A到B的逆时针转的角
@@ -74,6 +78,17 @@ bool OnSegment(Point p, Point a, Point b)//精度较高的判断
         else
             return 0;
     }
+}
+//根据一个极角，返回相应极角的向量
+Vector getVFromAngle(double ang)
+{
+    Vector V;
+    if(dcmp(ang - PI/2) == 0) V = Vector(1, 1);
+    else if(dcmp(ang + PI/2) == 0) V = Vector(1, -1);
+    else{
+        V = Vector(1, tan(ang));
+    }
+    return V;
 }
 //两直线相交
 Point GetLineIntersection(Point P,Vector v, Point Q, Vector w)

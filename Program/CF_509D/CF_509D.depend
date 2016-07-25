@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1467902485 source:f:\acm\gitacm\acm\program\cf_509d\main.cpp
+	<iostream>
+	<cstdio>
+	<algorithm>
+	<queue>
+	<cstring>
+	<string>
+	<cmath>
+	<set>
+	<map>
+	<vector>
+	<climits>
+	<bitset>
+

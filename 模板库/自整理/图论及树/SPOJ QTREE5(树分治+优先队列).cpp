@@ -62,8 +62,9 @@ void addedge(int u, int v)
 }
 priority_queue<PII, vector<PII>, greater<PII > > que[N];
 vector<PII > wV[N];
-int root, s[N], f[N];
 int col[N];
+//得到树的重心
+int root, s[N], f[N];
 bool vis[N];
 int n;
 int maxn;
@@ -107,6 +108,7 @@ void dfsgao(int u, int fa, int rt, int dis)
         dfsgao(v, u, rt, dis+1);
     }
 }
+//在调用dfs之前一定要记得将s[u]赋好值
 void dfs(int u)
 {
     maxn = INF;

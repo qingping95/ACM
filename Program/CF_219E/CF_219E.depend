@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1467726489 source:f:\acm\gitacm\acm\program\cf_219e\main.cpp
+	<iostream>
+	<cstdio>
+	<stack>
+	<cstring>
+	<queue>
+	<algorithm>
+	<cmath>
+	<set>
+

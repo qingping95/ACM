@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1468051192 source:f:\acm\gitacm\acm\program\ural_2015\main.cpp
+	<stdlib.h>
+	<stdio.h>
+	<stdarg.h>
+	<cstring>
+	<algorithm>
+	<vector>
+	<cmath>
+

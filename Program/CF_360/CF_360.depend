@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1467269884 source:f:\acm\gitacm\acm\program\cf_360\main.cpp
+	<iostream>
+	<cstdio>
+	<stack>
+	<cstring>
+	<queue>
+	<algorithm>
+	<cmath>
+
