@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1469993289 source:f:\acm\gitacm\acm\program\oojj\main.cpp
+1470051004 source:f:\acm\gitacm\acm\program\oojj\main.cpp
 	<iostream>
 	<cstdio>
 	<stack>
@@ -7,7 +7,4 @@
 	<queue>
 	<algorithm>
 	<cmath>
-	<set>
-	<assert.h>
-	<unordered_map>
 
