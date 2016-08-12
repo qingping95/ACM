@@ -12,6 +12,17 @@
 *	下面的解法中，直接用a[i]数组pow_mod,我认为是因为dp[0][j]的初始值都与b[i]数组相同；
 *   验证发现的确两种方法都可以AC。
 *   
+关于FWT modulo prime
+
+我们可以显然地处理FWT modulo prime,只需要取个模就好了(不是废话么= =)..
+
+还有...关于如何求2−1≡x(modp)
+中的x
+
+...直接x=(p+1)>>2...显然满足性质..
+
+///FWT for xor 的模数需要与2互素. 只要互素就有逆元
+
 *  *** 取模这么奇怪是因为当时CF那个题P不一定是质数，然而FWT的逆过程又需要不断的除2，所以最后计算完之后取一个长度的逆元即可。
 *  *** 不一定对。。。还是老实每次都取2的逆元好了。。
 */
@@ -64,10 +75,10 @@ void fwt(LL *x, int n, int op)  {
         for (int st = 0; st < n; st += mm << 1)
             for (int i = 0; i < mm; i ++)  {
                 LL a = x[st + i], b = x[st + i + mm];
-		x[st + i] = (a + b) % mod;
+                x[st + i] = (a + b) % mod;
                 x[st + i + mm] = (a - b) % mod;
-		if(x[st+i+mm] < 0) x[st+i+mm] += mod;
-		if(op == -1) x[st+i] = x[st+i]*inv2%mod, x[st+i+mm] = x[st+i+mm]*inv2%mod;
+                if(x[st+i+mm] < 0) x[st+i+mm] += mod;
+                if(op == -1) x[st+i] = x[st+i]*inv2%mod, x[st+i+mm] = x[st+i+mm]*inv2%mod;
             }
     }
 }
