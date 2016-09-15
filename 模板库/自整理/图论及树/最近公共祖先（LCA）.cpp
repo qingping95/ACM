@@ -17,10 +17,7 @@ void dfs(int v,int p,int d)
 {
     parent[0][v]=p;
     depth[v]=d;
-    for(int i=0;i<g[v].size();i++)
-    {
-        if(g[v][i]!=p) dfs(g[v][i],v,d+1);
-    }
+    for(int i=0;i<g[v].size();i++) if(g[v][i]!=p) dfs(g[v][i],v,d+1);
 }
 
 //预处理
@@ -29,13 +26,9 @@ void init()//预处理出parent
     root = 0; // or 1
     dfs(root,-1,0);
     for(int k=0;k+1<LOG_N;k++)
-    {
         for(int v=1;v<=n;v++)//这里根据顶点的起始下标改变
-        {
             if(parent[k][v]<0) parent[k+1][v]=-1;
             else parent[k+1][v]=parent[k][parent[k][v]];
-        }
-    }
 }
 //计算u和v的LCA
 int lca(int u,int v)
