@@ -21,7 +21,9 @@ Vector operator*(Vector A, double p){return Vector(A.x*p, A.y*p);}
 Vector operator/(Vector A, double p){return Vector(A.x/p, A.y/p);}
 bool operator<(const Point& a, const Point& b){return a.x<b.x || (a.x == b.x && a.y < b.y);}
 bool operator==(const Point& a, const Point& b){return dcmp(a.x-b.x) == 0 && dcmp(a.y-b.y) == 0;}
-double angle(Vector A){return atan2(A.y,A.x);}//返回A向量的极角atan2(y,x)所表达的意思是坐标原点为起点，指向(x,y)的射线在坐标平面上与x轴正方向之间的角的角度。范围是(-pi,pi];
+//返回值(-PI, PI]
+double angle(Vector A){return atan2(A.y,A.x);}//返回A向量的极角atan2(y,x)所表达的意思是坐标原点为起点，指向(x,y)的射线在坐标平面上与x轴正方向之间的角的角度。
+
 double Dot(Vector A, Vector B){return A.x*B.x+A.y*B.y;}
 double Length(Vector A){return sqrt(Dot(A,A));}
 double Angle(Vector A,Vector B){return acos(Dot(A,B)/Length(A)/Length(B));}//A到B的逆时针转的角
