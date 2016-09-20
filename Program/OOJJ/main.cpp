@@ -1,135 +1,155 @@
 #include <iostream>
 #include <cstdio>
-#include <stack>
-#include <cstring>
-#include <queue>
 #include <algorithm>
+#include <queue>
+#include <cstring>
+#include <string>
 #include <cmath>
-//#define lson x<<1
-//#define rson x<<1|1
-//#define mid ((lt[x].l+lt[x].r)/2)
-//#define ID(x, y) ((x)*m+(y))
-//#define CHECK(x, y) ((x)>=0 && (x)<n && (y)>=0 && (y)<m)
+#include <set>
+#include <map>
+#include <vector>
+#include <climits>
 using namespace std;
+#define pb push_back
+#define ALL(x) x.begin(),x.end()
+#define PII pair<ll,ll>
+#define MP(x,y) make_pair((x),(y))
+#define ll long long
+#define ull unsigned ll
+#define Max(a,b) a=max(a,b)
+#define Min(a,b) a=min(a,b)
+#define F first
+#define S second
+const ll N = 101111;
+struct edge{
+    ll to, w;
+};
+vector<edge> g[N];
+ll ni10[N];
+ll extend_gcd(ll a,ll b,ll &x,ll &y)
+{
+    if(b == 0)
+    {
+        x = 1, y = 0;
+        return a;
+    }
+    else
+    {
+        ll r = extend_gcd(b, a%b, y, x);
+        y -= x*(a/b);
+        return r;
+    }
+}
+ll n,M;
+ll mod_r(ll a,ll n)
+{
+    ll x,y;
+    ll d=extend_gcd(a,n,x,y);
+    return (x%n+n)%n;
+}
+ll z10[N];
+ll del[N];
+ll wt[N];
+ll newroot;
+ll maxn=0x3f3f3f3f;
+ll dfs(ll now,ll fa,ll all,ll& newroot , ll dep){
+    wt[now]=1;
+    ll mx=0;
+    //if(dep>100000) cerr<<"fuck";
+    for(edge nxt : g[now])
+    {
+        ll to = nxt.to;
+        if(to==fa || del[to]) continue;
+        ll siz=dfs(to,now,all,newroot,dep+1);
+        Max(mx,siz);
+        wt[now]+=siz;
+    }
+    Max(mx,all-wt[now]);
+    if(mx < maxn) maxn=mx ,newroot=now;
+    return wt[now];
+}
 
-typedef long long LL;
-typedef pair<LL,LL> PII;
-const LL INF=0x3f3f3f3f3f3f3f3fLL;
-void Open()
-{
-    #ifndef ONLINE_JUDGE
-        freopen("F:/in.txt","r",stdin);
-        //freopen("F:/my.txt","w",stdout);
-    #endif // ONLINE_JUDGE
+ll searchit(ll root,ll all){
+    maxn=0x3f3f3f3f;
+    dfs(root,-1,all,newroot,1);
+    return newroot;
 }
-const LL N = 500010;
-struct Point{
-    LL x, y;
-    Point(LL x = 0, LL y = 0) : x(x), y(y) {}
-    bool operator<(const Point& o) const{
-        return x < o.x || (x == o.x && y < o.y);
+map<ll,ll> mp;
+ll ans=0;
+ll tque[101111];
+ll tl=0;
+void gao(ll u,ll fa,ll zv,ll fv, ll dep, ll fir){
+    //in son
+    ll cha = -zv * ni10[dep] % M;
+    if(cha < 0) cha += M;
+    if(mp.count(cha)) ans += mp[cha];
+    //self
+    if(zv%M == 0 && fir) ans++;
+    if(fv%M == 0 && fir) ans++;
+    //in map!
+    tque[tl++] = fv;
+    for(ll i=0;i<g[u].size();i++){
+        ll to = g[u][i].to;
+        if(to == fa || del[to]) continue;
+        ll w = g[u][i].w;
+        ll nzv = zv * 10 + w;
+        nzv %= M;if(nzv < 0) nzv += M;
+        ll nfv = w * z10[dep]%M + fv;
+        nfv %= M;if(nfv < 0) nfv += M;
+        gao(to, u, nzv, nfv, dep+1, fir);
     }
-}p[N], pc[N], que[N], pd[N];
-typedef Point Vector;
-Vector operator-(Point A, Point B)
-{
-    return Vector(A.x-B.x, A.y-B.y);
 }
-LL Cross(Vector A, Vector B)
-{
-    return A.x*B.y-A.y*B.x;
-}
-LL getConUp(Point *p, LL n, Point *ch)
-{
-    sort(p, p+n);
-    LL m = 0;
-    for(LL i = 0; i < n; i++)
-    {
-        while(m > 1 && Cross(ch[m-1]-ch[m-2], p[i]-ch[m-2]) < 0) m--;
-        ch[m++] = p[i];
-    }
-    return m;
-}
-LL getConDn(Point *p, LL n, Point *ch)
-{
-    sort(p, p+n);
-    LL m = 0;
-    for(LL i = n-1; i >= 0; i--)
-    {
-        while(m > 1 && Cross(ch[m-1]-ch[m-2], p[i]-ch[m-2]) < 0) m--;
-        ch[m++] = p[i];
-    }
-    return m;
-}
-LL cal(LL a, LL b, LL c, LL d)
-{
-    return a * c + b * d;
-}
-int main()
-{
-//    Open();
-//    cout<<INF<<endl;
-    LL n;
-    scanf("%I64d", &n);
-    for(LL i = 0; i < n; i++)
-    {
-        LL x, y;
-        scanf("%I64d%I64d", &x, &y);
-        que[i] = Point(x, y);
-    }
-    LL m;
-    scanf("%I64d", &m);
-    LL mc = INF, mcy, md = INF, mdx;
-    for(LL i= 0;i < m; i++)
-    {
-        LL x, y;
-        scanf("%I64d%I64d", &x, &y);
-        p[i] = Point(x, y);
-        if(mc > x) mc = x, mcy = y;
-        if(md > y) md = y, mdx = x;
-    }
-    LL t = getConUp(p, m, pc);
-    LL xt = getConDn(p, m, pd);
-    for(LL i = 0; i < n; i++)
-    {
-        LL x = que[i].x;
-        LL y = que[i].y;
-        Point o(-y, x);
-        LL lb = 0, ub = t;
-        while(lb + 1 < ub)
-        {
-            LL mid = lb + ub >> 1;
-//            LL x2 = pc[mid].x, x1 = pc[mid-1].x;
-//            LL y2 = pc[mid].y, y1 = pc[mid-1].y;
-//            if(y*(y2-y1) <= -x*(x2-x1)) ub = mid;
-            if(Cross(pc[mid]-pc[mid-1], o) > 0) ub = mid;
-            else lb = mid;
-        }
-        LL ans = INF;
-        int up = min(ub+350, t-1);
-        for(LL j = max(0LL, lb-350); j <= up; j++)
-        {
-            ans = min(ans, cal(x, y, pc[j].x, pc[j].y));
-        }
 
-        lb = 0, ub = xt;
-        while(lb + 1 < ub)
-        {
-            LL mid = lb + ub >> 1;
-//            LL x2 = pd[mid].x, x1 = pd[mid-1].x;
-//            LL y2 = pd[mid].y, y1 = pd[mid-1].y;
-//            if(y*(y2-y1) <= -x*(x2-x1)) lb = mid;
-            if(Cross(pc[mid]-pc[mid-1], o) > 0) ub = mid;
-            else lb = mid;
+void fz(ll rt,ll sz){
+    queue<PII > sq;
+    sq.push(MP(rt,sz));
+    while(!sq.empty()){
+        PII now = sq.front(); sq.pop();
+        ll nr = searchit(now.F , now.S);
+        del[nr] = true;
+        mp.clear();
+        for(ll i=0;i<g[nr].size();i++){
+            ll to = g[nr][i].to;
+            ll w = g[nr][i].w;
+            if(del[to]) continue;
+            tl=0;
+            gao(to, nr, w, w, 1, 1);
+            for(ll j=0;j<tl;j++) mp[tque[j]]++;
+            sq.push(MP(to, wt[to]));
         }
-        up = min(ub+350, xt-1);
-        for(LL j = max(0LL, lb-350); j <= up; j++)
-        {
-            ans = min(ans, cal(x, y, pd[j].x, pd[j].y));
+        mp.clear();
+        ll sz = g[nr].size();
+        for(ll i=sz-1;i>=0;i--){
+            ll to = g[nr][i].to;
+            ll w = g[nr][i].w;
+            if(del[to]) continue;
+            tl=0;
+            gao(to, nr, w, w, 1, 0);
+            for(ll j=0;j<tl;j++) mp[tque[j]]++;
         }
-        ans = min(ans, cal(x, y, mc, mcy));
-        ans = min(ans, cal(x, y, mdx, md));
-        printf("%I64d%c", ans, " \n"[i == n-1]);
     }
+}
+
+int main(){
+//    freopen("F:/in.txt","r",stdin);
+    scanf("%I64d%I64d",&n,&M);
+
+    ni10[0] = 1;
+    z10[0] = 1;
+    ll nn10 = mod_r(10,M);
+    for(ll i=1;i<N;i++){
+        z10[i] = z10[i-1] * 10 % M;
+        ni10[i] = mod_r(z10[i], M)%M;
+    }
+
+    for(ll i=0;i<n-1;i++){
+        ll u,v,w;
+        scanf("%I64d%I64d%I64d",&u,&v,&w);
+        w %= M;
+        g[u].pb((edge){v, w});
+        g[v].pb((edge){u, w});
+    }
+    fz(0,n);
+    cout<<ans<<endl;
     return 0;
 }
