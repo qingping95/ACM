@@ -1,14 +1,10 @@
 # depslib dependency file v1.0
-1474128209 source:f:\acm\gitacm\acm\program\oojj\main.cpp
+1475937366 source:f:\acm\gitacm\acm\program\oojj\main.cpp
 	<iostream>
 	<cstdio>
-	<algorithm>
-	<queue>
+	<stack>
 	<cstring>
-	<string>
+	<queue>
+	<algorithm>
 	<cmath>
-	<set>
-	<map>
-	<vector>
-	<climits>
 
