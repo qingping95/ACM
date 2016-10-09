@@ -61,7 +61,7 @@ int main()
     return 0;  
 }  
 
-//下标从1开始
+
 void initRMQ(int n)
 {
     mm[0] = -1;
@@ -78,7 +78,6 @@ void initRMQ(int n)
             dp2[i][j] = min(dp2[i][j-1],dp2[i + (1<<(j-1))][j-1]);
         }
 }
-//下标从0开始
 void makermqmi(int n,int b[],int dp[][22])
 {
     int i,j;

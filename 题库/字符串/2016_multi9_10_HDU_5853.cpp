@@ -21,7 +21,7 @@ int rk[N], height[N];//
 //sa[i] 表示字典序第i个后缀的起始位置
 //rk[i] 表示str第i个位置的后缀在字典序中的排位，rk从1开始计数
 //height[i] 表示字典序排序中i和i-1后缀的最长公共前缀,从[2,len]有意义,左闭右闭
-//调用的时候，build_sa(a, n+1, m), getHeight(a, n), markrmq的时候，长度也是n+1;!!!!!!!!!!!!!!!!!!!!!!!!!!
+//调用的时候，build_sa(a, n+1, m), getHeight(a, n);
 void getHeight(char *s, int n)
 {
     int i, k = 0;
