@@ -1,4 +1,6 @@
 /*
+*   Q x: Find out a minimum z such that there exists a y in S and d(x, y) = z.
+*	d(x, y) : d(15, 50) = 15 * 2 * 5 / 3 = 3（3个数）
 *	num[i] 表达数i质因数的个数，对于询问中的x来说，答案为如下：
 *		num[lcm(x,a)/gcd(x,a)] = num[x/gcd(x,a)*a/gcd(x,a)] = num[x/gcd(x,a)]+num[a/gcd(x,a)];
 *	那么只需要枚举x的每个约数，寻找最小的num[a/gcd(x,a)]即可，用优先队列维护，并用vis数组标记是否被删除

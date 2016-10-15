@@ -100,6 +100,9 @@ int Rewind(int a[][N],int x[],bool f[],int n,int m,int r,int c)
   
 
 //HDU 5755
+//给定一个只含{0,1,2}的n*m的矩阵。
+//有一种操作：将(x,y)位置+2同时(x-1,y),(x+1,y),(x,y-1),(x,y+1)都会+1。
+//要求进行<=2*n*m次操作将矩阵变为全0，数据保证至少有一组解。
 #include <iostream>
 #include <cstdio>
 #include <stack>
