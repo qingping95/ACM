@@ -1,0 +1,25 @@
+斐波那契数列
+卡塔兰数
+欧拉函数
+GCD
+LCM
+Stirling（第一类、第二类）
+bell数
+莫比乌斯函数
+
+
+定理：
+威尔逊定理 http://blog.csdn.net/acdreamers/article/details/12711223
+欧拉定理
+五边形数定理
+
+
+一些小知识：
+杨氏矩阵和钩子公式
+http://blog.csdn.net/acdreamers/article/details/7909480
+原根
+离散对数
+伯努利数和自然数幂和 http://blog.csdn.net/acdreamers/article/details/38929067
+组合数取模 http://blog.csdn.net/acdreamers/article/details/8037918
+LCM from 1 to n http://blog.csdn.net/acdreamers/article/details/18364107
+n%i 之和 http://blog.csdn.net/acdreamers/article/details/10249611

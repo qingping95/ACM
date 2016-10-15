@@ -10,9 +10,9 @@ void fwt(LL *x, LL n, int op)  {
             for (LL i = 0; i < mm; i ++)  {
                 LL a = x[st + i], b = x[st + i + mm];
                 if(op == 1)x[st+i] = (a+b)%mod;
-		else x[st+i] = (a-b)%mod;
+				else x[st+i] = (a-b)%mod;
                 if(x[st+i] < 0) x[st+i] += mod;
-		x[st+i+mm] = b;
+				x[st+i+mm] = b;
             }
     }
 }

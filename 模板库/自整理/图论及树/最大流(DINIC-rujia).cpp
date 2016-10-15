@@ -29,7 +29,7 @@ struct Edge
     int from, to;
     int cap, flow;
 };
-struct ISAP
+struct DINIC
 {
     int n, m, s, t;
     vector<Edge> edges;
@@ -142,7 +142,7 @@ struct ISAP
     }
 };
 
-ISAP mf;
+DINIC mf;
 char str[35][35];
 int dir[][2] = {-1, 0, 0, -1, 1, 0, 0, 1, 0, 0};
 int main()
